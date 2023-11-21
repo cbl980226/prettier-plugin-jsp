@@ -43,13 +43,13 @@ it("should format JSP Scriptlet tag", () => {
 it("should format JSP Comments", () => {
   expectFormat(
     "<%--   This is JSP comment   --%>",
-    "<%-- This is JSP comment --%>"
+    "<!-- This is JSP comment -->"
   );
   expectFormat(
     "<!--   It was a HTML comment   -->",
-    "<%-- It was a HTML comment --%>"
+    "<!-- It was a HTML comment -->"
   );
-  expectFormat("<%-- <div v-if='true'> --%>", "<%-- <div v-if='true'> --%>");
+  expectFormat("<%-- <div v-if='true'> --%>", "<!-- <div v-if='true'> -->");
 });
 
 it("should format Self-Closing tags", () => {

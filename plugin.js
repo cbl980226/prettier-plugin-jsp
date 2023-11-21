@@ -89,7 +89,7 @@ const plugin = {
           }).formatted;
           return txt.replace(/^<JSP/, "<%@").replace(/\/>$/, "%>");
         } else if (node.type === "comment") {
-          return `<%-- ${node.value.trim()} --%>`;
+          return `<!-- ${node.value.trim()} -->`;
         } else {
           return getPrinter(options).print(path, options, print);
         }
